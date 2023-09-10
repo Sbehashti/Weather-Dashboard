@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/open-weather-icons@0.0.8/dist/css/open-weather-icons.min.css"/>
+        <link rel="stylesheet" href="./assets/css/style.css"/>
+        <title>Weather Dashboard</title>
+    </head>
+    <body>
+        <header class="bg-dark">
+            <h1 class="p-2 text-light text-center h1">Weather Dashboard</h1>
+        </header>
+        <div class="m-4 p-4">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-3">
+                        <h5>Search for a City:</h5>
+                        <form class="form-inline" id="search-form">
+                            <input type="search" class="form-control mb-3 ds-input" id="City Name" placeholder="Enter City Name...">
+                            <button type="submit" class="btn btn-primary mb-3"><span>Search</span></button>
+                        </form>
+                        <ul class="list-group" id="search-history">
+                        </ul>
+                    </div>
+
+
+                    <div class="col-md-9">
+                        <div class="card mt-2">
+                            <div class="card-body">
+                                <div class="d-flex flex-row ">
+                                    <h2 class="card-title align-self-center" id="main-city-name"></h2>
+                                </div>
+                                <h6 class="card-subtitle text-muted" id="main-city-temp">Temperature: </h6>
+                                <h6 class="card-subtitle mt-3 text-muted" id="main-city-humid">Humidity: </h6>
+                                <h6 class="card-subtitle mt-3 text-muted" id="main-city-wind">Wind Speed: </h6>
+                                <h6 class="card-subtitle mt-3 text-muted" id="main-city-uv">UV Index: <span id="uv-box" class="px-2 py-1 mb-1 text-light rounded font-weight-normal"></span></h6>
+                            </div>  
+                        </div>
+
+
+                        <div>
+                            <h2 class="card-title mt-3">Five Day Forecast:</h2>
+                            <div class="row justify-content-between" id="five-day"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.9/dayjs.min.js"></script>
+        <script src="./assets/js/script.js"></script>
+    </body>
+</html>
